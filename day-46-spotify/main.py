@@ -29,19 +29,19 @@ def get_liked_songs():
 def find_track(search: str):
     search_results = sp.search(q=search, type="track", limit=1)
     track_uri = search_results['tracks']['items'][0]['uri']
-    print(track_uri)
+    print("Track URI: ", track_uri)
     return track_uri
 
 # Create Playlist
 def create_playlist(name: str, description: str, public=False):
     response = sp.user_playlist_create(user=USER_ID, name=name, public=public, description=description)
-    print(response['id'])
+    print("Playlist id: ", response['id'])
     return response['id']
 
 # Add tracks to playlist
 def add_tracks_to_playlist(track_uris: list[str], playlist_id: str):
     response = sp.user_playlist_add_tracks(user=USER_ID, playlist_id=playlist_id, tracks=track_uris)
-    print(response)
+    print("Added tracks to playlist, ", response)
 
 # Scrape top 100 songs from date
 def scrape_100_songs_from_date(date: str):
