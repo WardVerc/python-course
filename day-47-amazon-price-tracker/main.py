@@ -19,3 +19,22 @@ price = soup.find(name="span", class_="a-price-whole").getText()[:-1]
 print(f"{product_title}: \n{price} eurootses")
 
 # Send mail when price < your_buy_price
+
+
+## with Selenium
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.add_experimental_option("detach", True)
+
+# driver = webdriver.Chrome(options=chrome_options)
+# driver.get("https://www.amazon.com.be/-/nl/Sony-PlayStation-DualSense-draadloze-controller/dp/B08H98GVK8/ref=sr_1_5?crid=1RF50PUZBYJRG&keywords=ps5&qid=1696513278&sprefix=ps5%2Caps%2C123&sr=8-5")
+
+# price_whole = driver.find_element(By.CLASS_NAME, value="a-price-whole")
+# price_frac = driver.find_element(By.CLASS_NAME, value="a-price-fraction")
+
+# print(f"Price is {price_whole.text}.{price_frac.text}")
+
+# # driver.close() # closes tab
+# driver.quit() # quits program
