@@ -1,0 +1,23 @@
+div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: yellow;
+}
+
+.image {
+  padding: 30px;
+  width: 300px;
+}
+
+.form {
+  padding: 20px 60px 60px 60px;
+  width: 280px; /* 60 + 60 = 120, 400-120 = 280px */
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 8px;
+}
