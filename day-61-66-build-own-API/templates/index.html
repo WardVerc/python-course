@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Cafe&Wifi API</title>
-</head>
-<body>
-    <h1>Welcome to the Cafe & Wifi API</h1>
-</body>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Welcome to the Cafe & Wifi API</h1>
+      <form class="form" method="post" action="/add">
+        <label>Name of Cafe</label>
+        <input name="name" />
+        <label>Google Map URL Link</label>
+        <input name="map_url" />
+        <label>Img URL</label>
+        <input name="img_url" />
+        <label>Location</label>
+        <input name="loc" />
+        <label>Sockets available?</label>
+        <input name="sockets" type="checkbox" />
+        <label>Toilet available?</label>
+        <input name="toilet" type="checkbox" />
+        <label>WiFi available in Tahiti?</label>
+        <input name="wifi" type="checkbox" />
+        <label>Telephone available?</label>
+        <input name="calls" type="checkbox" />
+        <label>How many seats?</label>
+        <input name="seats" />
+        <label>Price of coffee</label>
+        <input name="coffee_price" />
+        <input type="submit" value="Okaaaaay let's go" />
+      </form>
+      <p>
+        To get the API documentation, click on
+        <a
+          target="_blank"
+          href="https://documenter.getpostman.com/view/24307687/2s9YR3cFkg"
+          >this link</a
+        >.
+      </p>
+    </div>
+  </body>
 </html>
